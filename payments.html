@@ -1,63 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aura Essence Perfumes - Payments</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="main.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aura Essence Perfumes • Checkout</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-    <header>
+<body class="checkout-page">
+
+    <!-- HEADER -->
+    <header class="header">
         <div class="logo">Aura Essence</div>
-        <nav>
+        <nav class="navbar">
             <a href="index.html">Home</a>
             <a href="products.html">Perfumes</a>
-            <a href="payments.html">Payments</a>
+            <a href="payments.html" class="active">Payments</a>
             <a href="thankyou.html">Thank You</a>
         </nav>
     </header>
 
-    <section class="checkout-container">
-        <h2>Checkout & Payment</h2>
-        <div class="checkout-grid">
+    <!-- HERO SECTION -->
+    <section class="hero hero-checkout">
+        <h1 class="hero-title">Secure Your Perfume</h1>
+        <p class="hero-sub">Complete your order and enjoy the aroma of luxury</p>
+    </section>
 
-            <form class="checkout-form" onsubmit="submitOrder(event)">
-                <h3>Billing Details</h3>
+    <!-- CHECKOUT FORM -->
+    <section class="checkout-section dark-brown-bg retro-shadow">
+        <h2 class="section-title gold-text">Payment Details</h2>
 
-                <label>Full Name</label>
-                <input type="text" id="fullname" required>
+        <div class="checkout-container">
+            <form id="checkoutForm" onsubmit="submitPayment(event)">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required />
 
-                <label>Phone Number</label>
-                <input type="text" id="phone" required>
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required />
 
-                <label>Email</label>
-                <input type="email" id="email" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
 
-                <label>Address</label>
-                <textarea id="address" rows="3" required></textarea>
+                <label for="address">Address</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
 
-                <label>Payment Method</label>
-                <select id="payment">
-                    <option>UPI</option>
-                    <option>Credit Card</option>
-                    <option>Debit Card</option>
-                    <option>Cash on Delivery</option>
+                <label for="paymentMethod">Payment Method</label>
+                <select id="paymentMethod" name="paymentMethod">
+                    <option value="card">Credit/Debit Card</option>
+                    <option value="upi">UPI</option>
+                    <option value="cod">Cash on Delivery</option>
                 </select>
 
-                <button type="submit" class="submit-btn">Confirm & Pay</button>
+                <button type="submit" class="btn-submit">Confirm Order</button>
             </form>
 
-            <div class="order-summary">
-                <h3>Your Order Summary</h3>
-                <ul id="cartItems"></ul>
-                <p class="total">Total: ₹<span id="totalAmount">0</span></p>
+            <!-- ORDER SUMMARY -->
+            <div class="order-summary" id="orderSummary">
+                <!-- JS will load cart items here -->
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>Contact: info@auraessence.com • Instagram: @auraessenceperfumes</p>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 Aura Essence Perfumes. All Rights Reserved.</p>
     </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
