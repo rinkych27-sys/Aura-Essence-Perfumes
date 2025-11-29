@@ -62,3 +62,40 @@ form button:hover { background: #FFD966; }
 @media(max-width:768px){
   .checkout-container{ flex-direction: column; }
 }
+/* HERO SECTION FIX */
+.hero {
+    height: 90vh; /* more vertical space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-content {
+    background: rgba(90,11,46,0.6); /* semi-transparent overlay */
+    padding: 60px 40px; /* more padding for spacing */
+    border-radius: 12px;
+}
+
+.hero-title {
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 20px; /* space between title and subtitle */
+    color: #FFD966;
+    text-shadow: 0 3px 12px rgba(0,0,0,0.7);
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    margin-bottom: 40px; /* space between subtitle and buttons */
+    color: #FFD966;
+}
+
+.hero-buttons a {
+    margin: 10px;
+    display: inline-block;
+}
+
