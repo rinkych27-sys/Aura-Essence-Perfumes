@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You - Aura Essence Perfumes</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="main.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aura Essence Perfumes • Thank You</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-    <header>
+<body class="thankyou-page">
+
+    <!-- HEADER -->
+    <header class="header">
         <div class="logo">Aura Essence</div>
-        <nav>
+        <nav class="navbar">
             <a href="index.html">Home</a>
             <a href="products.html">Perfumes</a>
             <a href="payments.html">Payments</a>
-            <a href="thankyou.html">Thank You</a>
+            <a href="thankyou.html" class="active">Thank You</a>
         </nav>
     </header>
 
-    <section class="thankyou-section">
-        <h1>Thank You for Your Purchase!</h1>
-        <p>Your order has been successfully placed.</p>
-        <p class="order-id">Order ID: <span id="orderIdDisplay"></span></p>
-        <button onclick="location.href='index.html'">Back to Home</button>
+    <!-- THANK YOU SECTION -->
+    <section class="thankyou-section wine-gradient">
+        <div class="thankyou-box retro-shadow">
+            <h1 class="gold-text">Thank You!</h1>
+            <p>Your order has been successfully placed.</p>
+            <p>Order ID: <span id="orderIdBox" class="gold-text">XXXX</span></p>
+            <a href="index.html" class="btn-back">Back to Home</a>
+        </div>
     </section>
 
-    <footer>
-        <p>Contact: info@auraessence.com • Instagram: @auraessenceperfumes</p>
+    <!-- FOOTER -->
+    <footer class="footer dark-brown-bg gold-text">
+        <p>© 2025 Aura Essence Perfumes. All Rights Reserved.</p>
     </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
